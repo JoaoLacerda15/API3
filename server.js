@@ -10,12 +10,12 @@ server.use(express.json()) //Possibilidade de usar JSON
 server.use(bodyParser.urlencoded({ extended: true }))
 
 //EXemplo GET
-server.get('/atividade_cadastro_produtos/home.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/home.html'))
+server.get('/views/index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/index.html'))
 })
 
 //Exemplo POST com resposta 401
-server.post('/atividade_cadastro_produtos/home.html', (req, res) => {
+server.post('/views/index.html', (req, res) => {
     console.log(req.body)
     const { email, name } = req.body
     //CAdastro os dados no banco de dados!
@@ -23,7 +23,7 @@ server.post('/atividade_cadastro_produtos/home.html', (req, res) => {
     if (email !== 'muca@email.com') {
         return res.sendFile(path.join(__dirname, 'views/401.html'))
     }
-    res.sendFile(path.join(__dirname, 'views/home.html'))
+    res.sendFile(path.join(__dirname, '/views/index.html'))
 })
 
 //Middleware para rotas não encontradas!
