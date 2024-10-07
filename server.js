@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 //Importar para ter acesso ao caminho dos arquivos
 const path = require('path')
 //Expor arquivos estáticos..
-server.use(express.static(__dirname + '/public'));
+server.use(express.static(__dirname + '/views'));
 server.use(express.json()) //Possibilidade de usar JSON
 
 server.use(bodyParser.urlencoded({ extended: true }))
