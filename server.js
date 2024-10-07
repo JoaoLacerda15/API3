@@ -25,14 +25,7 @@ server.post('/atividade_cadastro_produtos/home.html', (req, res) => {
     }
     res.sendFile(path.join(__dirname, 'views/home.html'))
 })
-//Exemplo de retorno JSON
-server.get('/pets', (req, res) => {
-    res.send({
-        name: "Meu gato",
-        idade: "4 anos",
-        peso: "300kg"
-    })
-})
+
 //Middleware para rotas não encontradas!
 server.use(function (req, res, next) {
     console.log('aqui');
