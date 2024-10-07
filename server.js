@@ -11,7 +11,7 @@ server.use(bodyParser.urlencoded({ extended: true }))
 
 //EXemplo GET
 server.get('/atividade_cadastro_produtos/home.html', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views/index.html'))
+    res.sendFile(path.join(__dirname, 'views/home.html'))
 })
 
 //Exemplo POST com resposta 401
