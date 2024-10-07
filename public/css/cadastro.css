@@ -1,5 +1,5 @@
 body {
-    background-image: url('img/cadastro_background.jpg'); /* Caminho relativo correto */
+    background-image: url('../img/cadastro_background.jpg'); /* Caminho relativo correto */
     background-size: 100%; /* Ajusta o tamanho da imagem para cobrir o fundo */
     background-repeat: no-repeat; /* Opcional: impede a repetição da imagem */
 }
